@@ -1,12 +1,5 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "build": {
-    "env": {
-      "NODE_VERSION": "20.19"
-    }
-  }
+    { "source": "/(.*)", "destination": "/" }
+  ]
 }
