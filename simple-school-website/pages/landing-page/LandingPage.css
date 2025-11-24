@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.landing-page-hero,
+.card-list-container ,
+.final-image{
+  background-attachment: fixed;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.landing-page-hero {
+  background-image: url("../../assets/artisan-image.jpg");
+}
+
+.landing-page-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.about-us-container, .people-container {
+  padding: 0 3rem;
+}
+
+.about-us-list ul li {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.card-list-container {
+  background-image: url("../../assets/wall-mural-painting.jpg");
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.mini-list {
+  min-width: 375px;
+  background-color: rgba(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  height: 100%;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 1);
+}
+.mini-list div{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.mini-list h3 {
+  font-weight: 700;
+}
+
+
+.mini-list button {
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  background-color: rgb(69, 227, 255, 0.2);
+  border-radius: 2px;
+  color: #000000;
+  cursor: pointer;
+  border-bottom: 2px solid #000000;
+  width: 5rem;
+}
+
+.programs-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+.programs-container div {
+  width: 100%;
+  min-height: 17rem;
+}
+
+.programs-container div:nth-of-type(1),
+.programs-container div:nth-of-type(2),
+.programs-container div:nth-of-type(3),
+.programs-container div:nth-of-type(4),
+.programs-container div:nth-of-type(5) {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.programs-container div:nth-of-type(1) {
+  background-image: url("../../assets/bachelorOfFineArtImage.jpg");
+}
+
+.programs-container div:nth-of-type(2) {
+  background-image: url("../../assets/doctorArt.jpg");
+}
+
+.programs-container div:nth-of-type(3) {
+  background-image: url("../../assets/paintArt.jpg");
+}
+
+.programs-container div:nth-of-type(4) {
+  background-image: url("../../assets/medivalArt.jpg");
+}
+
+.programs-container div:nth-of-type(5) {
+  background-image: url("../../assets/picassoArt.jpg");
+}
+
+.people-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.newsletter-container{
+    max-width: 600px;
+    min-width: 375px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+input[type="text"]{
+    padding: 0.5rem;
+    outline: none;
+    width: 100%;
+    border: 1px solid rgb(129, 94, 255);
+    border-radius: 2px;
+}
+
+form button{
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    background-color: rgb(69, 227, 255, 0.2);
+    border-radius: 2px;
+    color: #000000;
+    cursor: pointer;
+    border-bottom: 2px solid #000000;
+    margin-top: 2rem;
+    width: 5rem;
+}
+
+.final-image{
+    background-image: url(../../assets/finalArt.jpg);
+}
+
+.footer {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: white;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column; 
+    gap: 1.5rem;
+    text-align: center; 
+}
+
+.footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer p:first-child {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.footer p {
+    color: #111920;
+    line-height: 1.5;
+}
+
+@media (min-width: 550px) {
+  .card-list-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .programs-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .programs-container div:nth-of-type(3) {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+  .programs-container div:nth-of-type(4),
+  .programs-container div:nth-of-type(5) {
+    grid-column: 1/3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-list-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+    .programs-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .programs-container div:nth-of-type(3) {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+  .programs-container div:nth-of-type(4){
+    grid-column: 1/2;
+  }
+  .programs-container div:nth-of-type(5) {
+    grid-column: 3/4;
+  }
+}
